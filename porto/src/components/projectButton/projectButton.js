@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 function ProjectButton(props) {
-    const handleClick = () => {
-        // Add your button click logic here
-    };
 
     return (
         <div
             className="project-button"
-            onClick={handleClick}
+            
         >
-            Click Me!
+            <Link to={`/project/${props.id}`}>
+                <h2>{props.title}</h2>
+                <p>{props.description}</p>
+            </Link>
         </div>
     );
 };
