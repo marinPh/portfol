@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
+import NavBar from './components/navBar/NavBar';
 
 function Home() {
   return <h2>Home</h2>;
@@ -10,12 +11,15 @@ function Home() {
 function About() {
   return <h2>About</h2>;
 }
+
 function App() {
   return (
-    <div className="App">
+    <div>
+      <NavBar />
         <Routes>
           <Route path="/Home" element={<Home />} />
           <Route path="/about" element={<About />} />
+        
         </Routes>
     </div>
   );
